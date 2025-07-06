@@ -1,3 +1,4 @@
+import type { ExtendedClient } from "clases/ExtendedClient";
 import type {
 	AnyThreadChannel,
 	ApplicationCommandPermissionsUpdateData,
@@ -41,7 +42,6 @@ import type {
 	VoiceChannel,
 	VoiceState,
 } from "discord.js";
-import type { ExtendedClient } from "../clases/ExtendedClient";
 
 export interface ExtendedClientEvents {
 	applicationCommandPermissionsUpdate: [

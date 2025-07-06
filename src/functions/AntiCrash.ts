@@ -1,4 +1,4 @@
-import type ExtendedClientInterface from "../types/ExtendedClientInterface";
+import type ExtendedClientInterface from "types/ExtendedClientInterface";
 
 export async function AntiCrash(client: ExtendedClientInterface) {
 	process.on("uncaughtException", (err, origin) => {

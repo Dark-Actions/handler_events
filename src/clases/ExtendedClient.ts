@@ -1,6 +1,6 @@
 import { Client, type ClientOptions, Collection } from "discord.js";
-import type ExtendedClientInterface from "../types/ExtendedClientInterface";
-import type { ExtendedSlashCommand } from "../types/ExtendedSlashCommand";
+import type ExtendedClientInterface from "types/ExtendedClientInterface";
+import type { ExtendedSlashCommand } from "types/ExtendedSlashCommand";
 
 export class ExtendedClient extends Client implements ExtendedClientInterface {
 	slashCommands = new Collection<string, ExtendedSlashCommand>();
@@ -11,9 +11,8 @@ export class ExtendedClient extends Client implements ExtendedClientInterface {
 		cyan: `\x1b[36m${args.join(" ")}\x1b[0m`,
 		green: `\x1b[32m${args.join(" ")}\x1b[0m`,
 	});
+	// biome-ignore lint/complexity/noUselessConstructor: tsx needs it
 	constructor(options: ClientOptions) {
 		super(options);
 	}
 }
-
-module.exports = ExtendedClient;

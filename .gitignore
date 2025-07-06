@@ -3,3 +3,6 @@ node_modules/
 .vscode/
 .DS_Store
 .env
+bun.lock
+package-lock.json
+commands.json

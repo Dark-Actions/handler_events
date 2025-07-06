@@ -1,4 +1,4 @@
-import { EventBuilder } from "../../clases/EventBuilder";
+import { EventBuilder } from "clases/EventBuilder";
 
 export default new EventBuilder({
 	name: "interactionCreate",

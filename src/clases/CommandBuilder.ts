@@ -1,4 +1,4 @@
-import type CommandBuilderInterface from "../types/CommandBuilderInterface";
+import type CommandBuilderInterface from "types/CommandBuilderInterface";
 
 export class CommandBuilder {
 	constructor(data: CommandBuilderInterface) {

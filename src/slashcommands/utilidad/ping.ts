@@ -1,5 +1,5 @@
+import { CommandBuilder } from "clases/CommandBuilder";
 import { EmbedBuilder } from "discord.js";
-import { CommandBuilder } from "../../../clases/CommandBuilder";
 
 export default new CommandBuilder({
 	name: "ping",

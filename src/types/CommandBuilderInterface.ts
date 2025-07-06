@@ -3,7 +3,7 @@ import type {
 	ChatInputApplicationCommandData,
 	ChatInputCommandInteraction,
 } from "discord.js";
-import type ExtendedClientInterface from "./ExtendedClientInterface";
+import type ExtendedClientInterface from "types/ExtendedClientInterface";
 
 type CommandBuilderInterface = {
 	execute: (

@@ -1,5 +1,5 @@
 import type { Awaitable } from "discord.js";
-import type { ExtendedClientEvents } from "./ExtendedClientEvents";
+import type { ExtendedClientEvents } from "types/ExtendedClientEvents";
 
 export default interface EventInterface<
 	Event extends keyof ExtendedClientEvents,

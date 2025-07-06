@@ -1,7 +1,7 @@
-import { ExtendedClient } from "./clases/ExtendedClient";
-import { AntiCrash } from "./functions/AntiCrash";
-import { loadEvents } from "./handlers/eventHandler";
-import { loadSlash } from "./handlers/slashHandler";
+import { ExtendedClient } from "clases/ExtendedClient";
+import { AntiCrash } from "functions/AntiCrash";
+import { loadEvents } from "handlers/eventHandler";
+import { loadSlash } from "handlers/slashHandler";
 const client = new ExtendedClient({ intents: 3276543 });
 
 (async () => {
@@ -13,15 +13,11 @@ const client = new ExtendedClient({ intents: 3276543 });
 })();
 
 client.on("ready", async () => {
-	await loadSlash(client)
-		.then(() => {
-			console.log(client.color("👽 | Comandos recargados").yellow);
-		})
-		.catch((err) =>
-			console.error(
-				client.color(`👽 | Error al recargar los comandos\n${err}`).red,
-			),
-		);
+	await loadSlash(client).catch((err) =>
+		console.error(
+			client.color(`👽 | Error al recargar los comandos\n${err}`).red,
+		),
+	);
 	await loadEvents(client)
 		.then(() => {
 			console.log(client.color("🥵 | Eventos cargados").cyan);

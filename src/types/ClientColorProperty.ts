@@ -1,4 +1,4 @@
-type ClientColorProperty = (...args: any[]) => {
+type ClientColorProperty = (...args: string[]) => {
 	red: string;
 	yellow: string;
 	magenta: string;
